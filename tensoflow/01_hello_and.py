@@ -23,6 +23,9 @@ for i in range(2000):
         output = sigmoid(np.sum(x[j] * w) + b_x * b)
         error = y[j][0] - output
         w = w + x[j] * 0.1 * error
+        #
+        #print('i: {0:4d}, j: {1:4d} w: {2}, b: {3}'.format(i, j, w, b))
+        #
         b = b + b_x * 0.1 * error
         error_sum += error
         
